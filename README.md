@@ -1,5 +1,7 @@
-# Y-combinator-es6
-An example of a Y-combinator along with the Luhn algorithm and human readable bytes in es6
+# Y-combinator-es6 with Luhn validation and byte conversion
+An example of a Y-combinator along with the Luhn algorithm and human readable bytes in es6.
+For details on es6, please refer to the official guide from AirBnb: 
+        https://github.com/airbnb/javascript
 ```javascript
 // Return the recursive pure function
 const Y = f => ((g=>(f((...x)=>g(g)(...x)))) (g=>(f((...x)=>g(g)(...x))))),
