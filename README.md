@@ -30,8 +30,6 @@ const luhnValidation = digits => (card) =>
                                                             parseInt(cur) + sum,0) % 10 == 0;
                                                             
 // Example usages
-console.log(Y(getHumanReadableString)(10500000));
-// expected output: 10.01 MB;
-console.log(Y(luhnValidation)("5105105105105100"));
-// expected output: true;
+console.log(Y(getHumanReadableString)(10500000)); // expected output: 10.01 MB;
+console.log(Y(luhnValidation)("5105105105105100")); // expected output: true;
 ```
