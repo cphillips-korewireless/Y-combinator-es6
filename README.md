@@ -31,5 +31,7 @@ const luhnValidation = digits => (card) =>
                                                             
 // Example usages
 console.log(Y(getHumanReadableString)(10500000));
+// expected output: 10.01 MB;
 console.log(Y(luhnValidation)("5105105105105100"));
+// expected output: true;
 ```
