@@ -1,11 +1,11 @@
 # Y-combinator-es6
 An example of a Y-combinator along with the Luhn algorithm and human readable bytes in es6
 ```javascript
-// Return the recursive pure function with provided args
+// Return the recursive pure function
 const Y = f => ((g=>(f((...x)=>g(g)(...x)))) (g=>(f((...x)=>g(g)(...x))))),
     unitTags = [' Bytes', ' KB', ' MB', ' GB', ' TB', ' PB', ' EB', ' ZB'];
     
-// speaks for itself
+// returns the sum of applying log and dividing the bytes by 1024
 const getLogValue = value =>(amount) => amount === 0 ? 0 : Math.floor(Math.log(amount) / Math.log(1024));
 
 // converts bytes to the next human readable unit where the unit is determined by the result of the log.
