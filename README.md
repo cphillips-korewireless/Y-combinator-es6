@@ -23,7 +23,9 @@ const getHumanReadableString = readable => (bytes, log=Y(getLogValue)(bytes)) =>
 const calc = e => (e*2 < 10) ? e*2 : e*2-9;
 const luhnValidation = digits => (card) => 
                                     card.split("").reduce( (sum, cur, i) => 
-                                                            i % 2 == 0 ? calc(cur): parseInt(cur) + sum,0) % 10 == 0;
+                                                            i % 2 == 0 ? 
+                                                            calc(cur)  : 
+                                                            parseInt(cur) + sum,0) % 10 == 0;
                                                             
 // Example usages
 console.log(Y(getHumanReadableString)(10500000));
